@@ -1,0 +1,172 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: left; /* 全てのテキストを左揃えに */
+}
+
+.title-container {
+    position: relative;
+    height: 300px; /* 適切な高さに設定 */
+}
+
+.title-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/Tabula_Peutingeriana_ROMA.png'); /* 背景として使用する画像のパス */
+    background-size: cover;
+    background-position: center;
+}
+
+.title-content {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    padding: 100px 100px 100px 100px; /* 右側に全体の25%の余白を保持 */
+    color: #000000;
+    font-size: 20px;
+    width: 75%; /* コンテンツ幅を全体の75%に設定 */
+    margin-left: auto; /* 左のマージンを自動調整して右に寄せる */
+}
+
+.author-info {
+    font-size: 20px /* 著者名と出版日の文字サイズ */
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: left; /* 全てのテキストを左揃えに */
+}
+
+.fixed-background01 {
+    position: relative; /* 背景画像を含む要素を相対位置に設定 */
+    min-height: 100vh; /* 最小の高さはビューポートの高さに */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* 背景画像を繰り返さない */
+    background-attachment: fixed; /* 背景画像を固定 */
+    padding: 20px 0; /* 上下にパディングを設定してテキスト用のスペースを確保 */
+    box-sizing: border-box; /* パディングを含むサイズ計算方法に変更 */
+}
+
+.fixed-background02 {
+    position: relative; /* 背景画像を含む要素を相対位置に設定 */
+    min-height: 100vh; /* 最小の高さはビューポートの高さに */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* 背景画像を繰り返さない */
+    background-attachment: fixed; /* 背景画像を固定 */
+    padding: 20px 0; /* 上下にパディングを設定してテキスト用のスペースを確保 */
+    box-sizing: border-box; /* パディングを含むサイズ計算方法に変更 */
+}
+
+.scrolling-content, .fixed-background-text {
+    max-width: 60ch; /* 最大50文字で改行するように設定 */
+    margin: auto; /* 中央揃え */
+    height: auto; /* コンテンツの高さに応じて自動調整 */
+    padding: 20px; /* パディングを適用 */
+    background-color: rgba(0, 0, 0, 0); /* 透明背景 */
+    color: #000000; /* テキストの色 */
+    text-align: justify; /* テキストを均等に分散 */
+    z-index: 0; /* 背景画像を背面に */
+}
+
+.fixed-background-text {
+    color: #ffffff; /* テキスト色を白に設定（.fixed-background-textのみ適用） */
+    font-size: 16px; /* フォントサイズ */
+    margin: auto; 
+}
+
+.fixed-background-text h2 {
+    color: #ffffff; /* タイトルテキストの色を白に設定 */
+}
+
+.video-wrapper {
+    display: block; /* 必要に応じて追加 */
+    width: 100%; /* 動画コンテナの幅を画面幅全体に拡大 */
+    overflow: hidden; /* オーバーフローした部分は非表示に */
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    /* 16:9のアスペクト比を維持しつつ、画面幅全体を使用 */
+    padding-top: 56.25%;
+    width: 100vw; /* ビューポートの幅を100%使用し、画面幅全体に拡大 */
+    left: 50%; /* 中央に配置 */
+    transform: translateX(-50%); /* X軸方向に-50%ずらして中央揃え */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* iframeの幅をコンテナの幅に合わせて100%に */
+    height: 100%; /* 高さもコンテナに合わせて100%に */
+}
+
+
+/* 画像を右側に配置し、テキストを左に流すスタイル */
+img.right {
+    float: right;
+    max-width: 300px; /* 画像の最大横幅を300ピクセルに設定 */
+    width: 100%; /* 画像の横幅を自動調整 */
+    height: auto; /* 高さを自動調整してアスペクト比を保持 */
+    margin: 0 0 20px 20px; /* 画像とテキストの間隔を調整 */
+}
+
+/* 画像を左側に配置し、テキストを右に流すスタイル */
+img.left {
+    float: left;
+    max-width: 300px; /* 画像の最大横幅を300ピクセルに設定 */
+    width: 100%; /* 画像の横幅を自動調整 */
+    height: auto; /* 高さを自動調整してアスペクト比を保持 */
+    margin: 0 20px 20px 0; /* 画像とテキストの間隔を調整 */
+}
+
+.creator-credits {
+    text-align: center; /* テキストを中央揃えに */
+    margin: 40px 0; /* 上下に余白を設定 */
+    padding: 20px 0; /* 上下にパディングを設定 */
+    font-size: 16px; /* フォントサイズを設定 */
+    color: #333; /* テキストの色を設定 */
+}
+
+/* メディアクエリを使用して異なる画面サイズに対応 */
+@media (max-width: 800px) {
+    .scrolling-content, .fixed-background-text {
+        max-width: 100%; /* 画面が狭い場合はテキスト幅を最大化 */
+        padding: 10px; /* パディングを調整 */
+    }
+}
+
+/* スマホなどの小さなデバイス向けのスタイル */
+@media (max-width: 600px) {
+    .fixed-background01 {
+        background-size: 200%; /* 背景画像を拡大して中央の部分のみ表示 */
+        background-position: center; /* 画像の中央部分を表示 */
+    }
+
+    .fixed-background01 {
+        background-size: 200%; /* 背景画像を拡大して中央の部分のみ表示 */
+        background-position: center; /* 画像の中央部分を表示 */
+    }
+
+    img.right, img.left {
+        float: none; /* floatスタイルを解除 */
+        display: block; /* 画像をブロックレベル要素として表示 */
+        max-width: 100%; /* 画像の幅をコンテナの幅いっぱいに拡張 */
+        margin: 10px 0; /* 上下にマージンを設定して、テキストからの距離を確保 */
+    }
+    .title-content {a
+        text-align: center; /* テキストを中央揃えに */
+        padding: 50px 20px; /* スマホの画面に合わせてパディングを調整 */
+   }
+}
+
