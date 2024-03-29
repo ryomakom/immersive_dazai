@@ -44,7 +44,7 @@ body, html {
     text-align: left; /* 全てのテキストを左揃えに */
 }
 
-.fixed-background01 {
+.fixed-background02 {
     position: relative; /* 背景画像を含む要素を相対位置に設定 */
     min-height: 100vh; /* 最小の高さはビューポートの高さに */
     background-size: cover;
@@ -55,7 +55,7 @@ body, html {
     box-sizing: border-box; /* パディングを含むサイズ計算方法に変更 */
 }
 
-.fixed-background02 {
+.fixed-background03 {
     position: relative; /* 背景画像を含む要素を相対位置に設定 */
     min-height: 100vh; /* 最小の高さはビューポートの高さに */
     background-size: cover;
@@ -148,12 +148,12 @@ img.left {
 
 /* スマホなどの小さなデバイス向けのスタイル */
 @media (max-width: 600px) {
-    .fixed-background01 {
+    .fixed-background02 {
         background-size: 200%; /* 背景画像を拡大して中央の部分のみ表示 */
         background-position: center; /* 画像の中央部分を表示 */
     }
 
-    .fixed-background01 {
+    .fixed-background03 {
         background-size: 200%; /* 背景画像を拡大して中央の部分のみ表示 */
         background-position: center; /* 画像の中央部分を表示 */
     }
